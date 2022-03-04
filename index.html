@@ -158,7 +158,6 @@
     camera-orbit="-30deg auto auto"         
     max-camera-orbit="auto 100deg auto"     
     shadow-intensity="1"                          
-    camera-controls                         
     src="./cube_small.glb"              
     alt="A 3D model of an armchair."        
     style="width:800px;height:1000px;">  
@@ -171,7 +170,7 @@
     max-camera-orbit:カメラ関連
     shadow-intensity:たぶん影の濃さ
     camera-controls:カメラ自動で動く
-    src:ページにアクセスした時、最初に表示するオブジェクト
+    src:ページにアクセスした時、最初に表示するオブジェクト(オブジェクト選択の初期表示は他の場所で設定しているため、設定によっては表示オブジェクトと異なる場合がある)
     alt:
     style:表示領域の大きさ(オブジェクトだけではなく、選択肢、AR起動ボタン等、作成したもの全て)
 
@@ -192,17 +191,27 @@
       <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
 
       <!-- 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスの内容　デザインは上の#controlsの所でやっている -->
-      <div id="controls" class="dim">     <!-- id:controlsという名前のついたボックスを指定      -->
-        <label for="src">表示オブジェクト:</label> <!-- ボックスの上の方に表示される文字 -->
-        <select id="src"> <!-- たぶん、< opion value:表示させるオブジェクトファイル> 選択肢に出てくる文字 -->
-          <option value="./cube_small.glb">cube_small</option>    <!-- 選択肢の上から1番目 -->
-          <option value="./cube_medium.glb">cube_medium</option>        <!-- 選択肢の上から2番目 -->
-          <option value="./cube_big.glb">cube_big</option>  <!-- 選択肢の上から3番目 -->
-          <option value="">オブジェクト4</option>   <!-- 選択肢の上から4番目 -->
+      <div id="controls" class="dim">     <!-- id:controlsという名前のついたボックスを指定 -->
+        
+        <!-- ボックスの上から1番目に表示される文字 -->
+        <label for="src">表示オブジェクト:</label>
+
+        <!-- 上記の文字の右側に表示されるボックスの要素 -->
+        <select id="src">
+          <!-- <opion value:表示させるオブジェクトファイル> 選択肢に出てくる文字 -->
+          <option value="./cube_small.glb">cube_small</option>    <!-- 選択肢の上から1番目のオブジェクトのプレビュー(ファイル)と、実際に表示される文字 -->
+          <option value="./cube_medium.glb">cube_medium</option>  <!-- 選択肢の上から2番目    〃     -->
+          <option value="./cube_big.glb">cube_big</option>        <!-- 選択肢の上から3番目    〃     -->
+          <option value="">オブジェクト4</option>                  <!-- 選択肢の上から4番目    〃     -->
         </select><br>
     
-        <label for="show-dimensions">寸法ON/OFF:</label> <!-- ボックスの下の方に表示される文字 -->
-        <input id="show-dimensions" type="checkbox" checked="true">  <!-- チェックボックス作成、その他の機能 -->
+
+
+        <!-- ボックスの上から2番目に表示される文字 -->
+        <label for="show-dimensions">寸法ON/OFF:</label> 
+
+        <!-- 上記の文字の右側に表示されるボックスの要素 -->
+        <input id="show-dimensions" type="checkbox" checked="true">  <!--  -->
       </div>
     </model-viewer>
     
