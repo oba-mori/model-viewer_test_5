@@ -68,17 +68,17 @@
       /* 寸法が入るボックス、文字のフォント、色等 */
       .dim{
         background: #fff;    /* ボックスの背景色 */
-        border-radius: 20px;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+        border-radius: 6px;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
-        color: rgba(0, 0, 0, 0.8);        /* 色 */
+        color: rgba(0, 0, 0, 0.8);        /* 多分要素(文字)の色 */
         display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
         font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
         font-size: 18px;      /* フォントの大きさ */
         font-weight: 700;     /* フォントの太さ */
         max-width: 128px;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
-        overflow-wrap: break-word;
-        padding: 0.5em 1em;
-        position: absolute;
+        overflow-wrap: break-word;  /*  */
+        padding: 0.5em 1em;   /*  */
+        position: absolute;   /*  */
         width: max-content;   /* 幅 */
         height: max-content;  /* 高さ */
         transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
@@ -91,13 +91,13 @@
       
       /* 寸法用の白い丸、数字を非表示にする */
       .hide{
-        display: none;
+        display: none;  /* none:非表示 */
       }
       
       /* これにより、要素が読み込まれている間、子ノードが非表示になります */
       /*  */
       :not(:defined) > * {
-        display: none;
+        display: none;  /* none:非表示 */
       }
     </style>
     <!-- CSS終わり -->
@@ -149,7 +149,7 @@
 
 
 
-<!--   -->
+    <!--   -->
     <model-viewer 
     id="dimension-demo"                 
     ar 
@@ -206,6 +206,9 @@
       </div>
     </model-viewer>
     
+
+
+    <!-- javascript -->
     <script type="module">
       const modelViewer = document.querySelector('#dimension-demo');
     
@@ -297,20 +300,7 @@
         });
       });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- javascript終わり -->
 
 
 
