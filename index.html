@@ -39,28 +39,30 @@
     interaction-prompt="auto"
     auto-rotate ar magic-leap> -->
 
-    
     <!-- </model-viewer> -->
 
 
+
+    <!-- CSS -->
     <style>
+      /* 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスのデザイン、内容は下の div id="controls" の所でやっている */
       #controls {
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        max-width: unset;
-        transform: unset;
-      }
+        position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
+        bottom: 16px;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
+        left: 16px;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
+        max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
+        transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
+      }                     /* unsetは、親要素から継承される属性に対しては inherit と同じ動作を、継承されない属性に対しては initial と同じ動作をする */
       
       /* オブジェクトの頂点に配置される白い丸 (寸法(幅、高さ、奥行き)の長さを見やすくするためのもの) */
       .dot{
-        display: block;
-        width: 12px;    /*幅*/
-        height: 12px;   /*高さ*/
-        border-radius: 50%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-        background: #fff;
-        --min-hotspot-opacity: 0;
+        display: block; /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
+        width: 12px;    /* 幅 */
+        height: 14px;   /* 高さ */
+        border-radius: 50%;         /*  */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);  /*  */
+        background: #fff;         /*  */
+        --min-hotspot-opacity: 0;   /*  */
       }
     
       .dim{
@@ -94,7 +96,7 @@
         display: none;
       }
     </style>
-
+    <!-- CSS終わり -->
 
 
 
@@ -165,7 +167,7 @@
     camera-controls:カメラ自動で動く
     src:表示するオブジェクト
     alt:
-    style:ページに表示する大きさ(オブジェクトだけではなく、選択肢、AR起動ボタン等、作成したもの全て)
+    style:表示領域の大きさ(オブジェクトだけではなく、選択肢、AR起動ボタン等、作成したもの全て)
 
 
      -->
