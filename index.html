@@ -62,36 +62,40 @@
         border-radius: 50%;         /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 → 〇のような図が作れる、50％:ボックスの辺の50％の半径の円を作成 → 円が出来る */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */
         background: #fff;         /* background:ボックスの背景色指定 */
-        --min-hotspot-opacity: 0;   /*  */
+        --min-hotspot-opacity: 0;   /* HTML内の要素の不透明度を設定(0:完全に透明) */
       }
-    
+      
+      /*  */
       .dim{
-        background: #fff;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-        color: rgba(0, 0, 0, 0.8);
-        display: block;
-        font-family: Futura, Helvetica Neue, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        max-width: 128px;
+        background: #fff;    /* ボックスの背景色 */
+        border-radius: 10px;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);    /*  */
+        color: rgba(0, 0, 0, 0.8);        /*  */
+        display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
+        font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
+        font-size: 18px;      /* フォントの大きさ */
+        font-weight: 700;     /* フォントの太さ */
+        max-width: 128px;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
         overflow-wrap: break-word;
         padding: 0.5em 1em;
         position: absolute;
-        width: max-content;
-        height: max-content;
-        transform: translate3d(-50%, -50%, 0);
-        --min-hotspot-opacity: 0;
+        width: max-content;   /* 幅 */
+        height: max-content;  /* 高さ */
+        transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
+        --min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明) */
       }
     
       .show{
-        --min-hotspot-opacity: 1;
+        --min-hotspot-opacity: 1;     /* HTML内の要素の不透明度を設定(1:完全に不透明) */
       }
-    
+      
+      /* 寸法用の白い丸、数字を非表示にする */
       .hide{
         display: none;
       }
-      /* This keeps child nodes hidden while the element loads */
+      
+      /* これにより、要素が読み込まれている間、子ノードが非表示になります */
+      /*  */
       :not(:defined) > * {
         display: none;
       }
@@ -100,6 +104,8 @@
 
 
 
+   
+   
 
 
 
