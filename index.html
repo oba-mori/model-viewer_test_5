@@ -46,13 +46,13 @@
     <style>
       #controls {
         position: absolute;
-        bottom: 50px;
-        left: 50px;
+        bottom: 16px;
+        left: 16px;
         max-width: unset;
         transform: unset;
       }
       
-      /* 寸法の長さを見やすくするための白い丸 */
+      /* オブジェクトの頂点に配置される白い丸 (寸法(幅、高さ、奥行き)の長さを見やすくするためのもの) */
       .dot{
         display: block;
         width: 12px;    /*幅*/
@@ -63,7 +63,6 @@
         --min-hotspot-opacity: 0;
       }
     
-
       .dim{
         background: #fff;
         border-radius: 4px;
@@ -187,7 +186,7 @@
       <div id="controls" class="dim">
         <label for="src">Product:</label>
         <select id="src">
-          <option value="./.glb">cube_small</option>
+          <option value="./cube_small.glb">cube_small</option>
           <option value="../../assets/ShopifyModels/Mixer.glb">Mixer</option>
           <option value="../../assets/ShopifyModels/GeoPlanter.glb">Cactus</option>
         </select><br>
