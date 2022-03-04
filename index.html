@@ -46,22 +46,24 @@
     <style>
       #controls {
         position: absolute;
-        bottom: 16px;
-        left: 16px;
+        bottom: 50px;
+        left: 50px;
         max-width: unset;
         transform: unset;
       }
-    
+      
+      /* 寸法の長さを見やすくするための白い丸 */
       .dot{
         display: block;
-        width: 12px;
-        height: 12px;
+        width: 12px;    /*幅*/
+        height: 12px;   /*高さ*/
         border-radius: 50%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
         background: #fff;
         --min-hotspot-opacity: 0;
       }
     
+
       .dim{
         background: #fff;
         border-radius: 4px;
@@ -140,8 +142,36 @@
 
 
 
+<!--   -->
+    <model-viewer 
+    id="dimension-demo"                 
+    ar 
+    ar-modes="webxr"               
+    ar-scale="fixed"                      
+    camera-orbit="-30deg auto auto"         
+    max-camera-orbit="auto 100deg auto"     
+    shadow-intensity="1"                          
+    camera-controls                         
+    src="./cube_small.glb"              
+    alt="A 3D model of an armchair."        
+    style="width:800px;height:1000px;">  
+    <!--  
+    id:
+    ar:ARとして書いてますよ的な
+    ar-modes:AR関連
+    ar-scale:AR関連
+    camera-orbit:カメラ関連
+    max-camera-orbit:カメラ関連
+    shadow-intensity:たぶん影の濃さ
+    camera-controls:カメラ自動で動く
+    src:表示するオブジェクト
+    alt:
+    style:ページに表示する大きさ(オブジェクトだけではなく、選択肢、AR起動ボタン等、作成したもの全て)
 
-    <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src="./cube_small.glb" alt="A 3D model of an armchair." style="width:800px;height:1000px;">
+
+     -->
+
+
       <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
       <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
       <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
