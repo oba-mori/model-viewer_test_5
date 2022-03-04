@@ -152,9 +152,12 @@
     max-camera-orbit="auto 100deg auto"     
     shadow-intensity="1"                          
     camera-controls                         
-    src="./cube_small.glb"              
+    src="./cube_small.glb"     
+    ios-src="./.usdz"         
     alt="A 3D model of an armchair."        
-    style="width:800px;height:1000px;">  
+    style="width:800px;height:1000px;"
+    background-color: greenyellow;
+    >  
     <!--  
     id:
     ar:ARとして書いてますよ的な
@@ -164,12 +167,15 @@
     max-camera-orbit:カメラ関連
     shadow-intensity:たぶん影の濃さ
     camera-controls:カメラ自動で動く
-    src:ページにアクセスした時、最初に表示するオブジェクト(オブジェクト選択の初期表示は他の場所で設定しているため、設定によっては表示オブジェクトと異なる場合がある)
+    src:(Android用)ページにアクセスした時、最初に表示するオブジェクト(オブジェクト選択の初期表示は他の場所で設定しているため、設定によっては表示オブジェクトと異なる場合がある)
+    
+    //合っているかは分からない
+    ios-src:(iOS用)内容は上記の src と同じ　
+    
     alt:
     style:表示領域の大きさ(オブジェクトだけではなく、選択肢、AR起動ボタン等、作成したもの全て)
-
-
-     -->
+    background-color:背景色
+    -->
 
 
       <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
