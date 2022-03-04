@@ -24,7 +24,6 @@
 
 
 
-
     <!-- <model-viewer
     ar
     alt="cube"
@@ -104,12 +103,6 @@
 
 
 
-   
-   
-
-
-
-
 
 
     <!-- styleで表示を大きくできる 
@@ -158,6 +151,7 @@
     camera-orbit="-30deg auto auto"         
     max-camera-orbit="auto 100deg auto"     
     shadow-intensity="1"                          
+    camera-controls                         
     src="./cube_small.glb"              
     alt="A 3D model of an armchair."        
     style="width:800px;height:1000px;">  
@@ -199,7 +193,7 @@
         <!-- 上記の文字の右側に表示されるボックスの要素 -->
         <select id="src">
           <!-- <opion value:表示させるオブジェクトファイル> 選択肢に出てくる文字 -->
-          <option value="./cube_small.glb">cube_small</option>    <!-- 選択肢の上から1番目のオブジェクトのプレビュー(ファイル)と、実際に表示される文字 -->
+          <option value="./cube_small.glb">cube_small</option>    <!-- 選択肢の上から1番目のオブジェクトと、実際に表示される文字 -->
           <option value="./cube_medium.glb">cube_medium</option>  <!-- 選択肢の上から2番目    〃     -->
           <option value="./cube_big.glb">cube_big</option>        <!-- 選択肢の上から3番目    〃     -->
           <option value="">オブジェクト4</option>                  <!-- 選択肢の上から4番目    〃     -->
@@ -220,7 +214,7 @@
     <!-- javascript -->
     <script type="module">
       const modelViewer = document.querySelector('#dimension-demo');
-    
+      
       modelViewer.querySelector('#src').addEventListener('input', (event) => {
         modelViewer.src = event.target.value;
       });
