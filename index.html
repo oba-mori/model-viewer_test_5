@@ -182,16 +182,18 @@
       <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
       <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
       <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button>
-    
-      <div id="controls" class="dim">
-        <label for="src">Product:</label>
-        <select id="src">
+
+      <!-- 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスの内容　デザインは上の#controlsの所でやっている -->
+      <div id="controls" class="dim">     <!-- id:controlsという名前のついたボックスを指定      -->
+        <label for="src">表示オブジェクト:</label> <!-- ボックスの上の方に表示される文字 -->
+        <select id="src"> <!--  -->
           <option value="./cube_small.glb">cube_small</option>
           <option value="../../assets/ShopifyModels/Mixer.glb">Mixer</option>
           <option value="../../assets/ShopifyModels/GeoPlanter.glb">Cactus</option>
+          <option value="">四個目のオブジェクト</option>
         </select><br>
     
-        <label for="show-dimensions">Show Dimensions:</label>
+        <label for="show-dimensions">寸法ON/OFF:</label> <!-- ボックスの下の方に表示される文字 -->
         <input id="show-dimensions" type="checkbox" checked="true">
       </div>
     </model-viewer>
